@@ -1,0 +1,34 @@
+<MenuScreen>:
+    Image:
+        id: menu_background
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (1, 1)
+        source: "assets\menu_background.gif"
+    Button:
+        text: "Start"
+        size_hint: (0.2, 0.07)
+        pos_hint: {"x": 0.4, "y": 0.2}
+        on_press: root.start_the_game()
+
+<GameScreen>:
+    SpecialInput:
+        id: type_input
+        size_hint: (1, 1)
+        pos_hint: {"x": 0, "y": 0}
+        foreground_color: (1, 0, 0, 1)
+        background_color: (0, 0, 0, 1)
+        disabled: True
+    TextInput:
+        id: text_to_write
+        foreground_color: (0, 0, 0, 1)
+        size_hint: (1, 1)
+        pos_hint: {"x": 0, "y": 0}
+        disabled: True
+    Button:
+        id: counter
+        text: ""
+        font_size: 30
+        background_color: (0, 0, 1, 1)
+        size_hint: (0.4, 0.2)
+        pos_hint: {"x": 0.3, "y": 0.3}
